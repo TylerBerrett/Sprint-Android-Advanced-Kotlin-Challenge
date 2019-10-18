@@ -12,6 +12,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    companion object{
+        val BUNDLE_KEY = "key"
+    }
+
     lateinit var router: Router
 
     val mainLayout by lazy {

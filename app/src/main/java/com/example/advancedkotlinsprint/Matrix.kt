@@ -52,7 +52,10 @@ operator fun Array<Array<Int>>.times(a: Array<Array<Int>>): ArrayList<String> {
 
     product.forEach {
         it.forEach {
-            list.add("$it")
+            if (it != 0){
+                list.add("$it")
+            }
+
         }
     }
 

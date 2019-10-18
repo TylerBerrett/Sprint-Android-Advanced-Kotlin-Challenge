@@ -19,7 +19,7 @@ class ChildController: Controller {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
         val view = inflater.inflate(R.layout.child_controller, container, false)
         val list = args.getStringArrayList(MainActivity.BUNDLE_KEY)
-        
+
 
         view.child_et_top_left_top.setText(list?.get(0))
         view.child_et_top_right_top.setText(list?.get(1))

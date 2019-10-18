@@ -34,7 +34,6 @@ operator fun Array<Array<Int>>.times(a: Array<Array<Int>>): ArrayList<String> {
     val column1 = this.size
     val row1 = this[0].size
     val column2 = a.size
-    val row2 = a[0].size
 
     val product = Array(row1) {IntArray(column2)}
     for (i in 0 until row1){
@@ -54,4 +53,12 @@ operator fun Array<Array<Int>>.times(a: Array<Array<Int>>): ArrayList<String> {
     }
 
     return list
+}
+
+operator fun Array<Array<Int>>.get(a:Int, b: Int): Int{
+    return this[a][b]
+}
+
+operator fun Array<Array<Int>>.set(a: Int, b: Int, value: Int){
+    this[a][b] = value
 }

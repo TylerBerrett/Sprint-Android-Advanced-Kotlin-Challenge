@@ -23,7 +23,7 @@ class RootController: Controller {
         view.calculate_button.setOnClickListener {
             val matrix = Matrix().matrix
 
-            matrix[0][0] = view.et_top_left_top.getNumber()
+            matrix.set(0,0, view.et_top_left_top.getNumber())
             matrix[0][1] = view.et_top_right_top.getNumber()
             matrix[1][0] = view.et_top_left_bottom.getNumber()
             matrix[1][1] = view.et_top_right_bottom.getNumber()

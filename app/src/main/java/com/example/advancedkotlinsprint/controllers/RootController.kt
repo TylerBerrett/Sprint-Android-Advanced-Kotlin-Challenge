@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.bluelinelabs.conductor.Controller
 import com.bluelinelabs.conductor.RouterTransaction
 import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler
-import com.bluelinelabs.conductor.changehandler.VerticalChangeHandler
+
 import com.example.advancedkotlinsprint.*
 import kotlinx.android.synthetic.main.root_controller.view.*
 
@@ -21,7 +21,9 @@ class RootController: Controller {
         val view = inflater.inflate(R.layout.root_controller, container, false)
 
         view.calculate_button.setOnClickListener {
-            val matrix = Matrix().matrix
+            Matrix.height = 2
+            Matrix.width = 2
+            val matrix = matrix(Matrix.height, Matrix.width)
 
             matrix.set(0,0, view.et_top_left_top.getNumber())
             matrix[0][1] = view.et_top_right_top.getNumber()
@@ -29,7 +31,7 @@ class RootController: Controller {
             matrix[1][1] = view.et_top_right_bottom.getNumber()
 
 
-            val matrix2 = Matrix().matrix2
+            val matrix2 = Matrix.matrix2
 
             matrix2[0][0] = view.et_bottom_left_top.getNumber()
             matrix2[0][1] = view.et_bottom_right_top.getNumber()

@@ -1,9 +1,8 @@
 package com.example.advancedkotlinsprint
 
-class Matrix {
+object Matrix {
 
     //TODO: Fix adjusting size
-    //TODO: Overload index
 
     var height: Int = 2
         get() = field
@@ -21,10 +20,15 @@ class Matrix {
     var width2 = 2
 
 
+
     val matrix = Array(height) {Array(width) { 0 } }
 
     val matrix2 = Array(height2) {Array(width2) { 0 } }
 
+}
+
+fun matrix(height: Int, width: Int): Array<Array<Int>> {
+    return Array(height) { Array(width) { 0 } }
 }
 
 
